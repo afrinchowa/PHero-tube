@@ -8,6 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
+
+  <style>
+    .verified-icon {
+      color: blue;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,52 +23,31 @@
         <img src="img/Logo.png" alt="">
       </div>
       <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xl">Sort by view </a>
+        <a class="btn btn-ghost normal-case text-xl" id="sort-by-views">Sort by view </a>
+        <ul id="vedios">
+        </ul>
       </div>
       <div class="navbar-end">
-        <div class="dropdown">
-          <label tabindex="0" class="btn btn-ghost btn-circle">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-            </svg>
-          </label>
-          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">`
-            <li><a>Homepage</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>About</a></li>
-          </ul>
+        <div>
+          <a href="next.html">
+            <button class="btn bg-red-500  text-white rounded-lg ">Blog</button>
+          </a>         
         </div>
       </div>
     </div>
   </header>
-
   <div class="tab-container w-full">
-    <div class="tabs tabs-boxed p-5 w-96 m-auto text-center flex justify-center" id="tab-container">
-      <!-- <a class="tab tab-active">Tab 1</a> 
-            <a class="tab ">Tab 2</a> 
-            <a class="tab">Tab 3</a> -->
+    <div class="tabs tabs-boxed p-5 w-96 mb-4 m-auto text-center flex justify-center" id="tab-container">
     </div>
-  </div>
+  </div>+
   <main>
-    <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-      <!-- 
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-        <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div> -->
+    <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2  ">
     </div>
   </main>
-  <footer>
-
-  </footer>
-
+  <div id="imageContainer">
+    <img class="mx-auto" src="img/Icon.png" alt="">
+    <h1 class="text-2xl font-bold text-center">Oops!! Sorry, There is no <br>content here</h1>
+  </div>
   <!-- add javascript  file from here -->
   <script src="js/index.js"></script>
 
