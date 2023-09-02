@@ -33,14 +33,33 @@ else{
     imageContainer.style.display ="none"
 }
 
+
+// shorted data
+let shortedData =[];
+const dataShorting = () => {
+    shortedData.sort((a,b) => {
+        let view1 = a.others.views;
+        view1 = parseInt(view1);
+
+        let view2 =b.others.views;
+        view2 = parseInt(view2);
+
+        if(view1 > view2){
+            return -1 ;
+        }else{
+            return 1;
+        }
+    });
+}
+
     data.data?.forEach((vedios) => {
         console.log(vedios);
         const div = document.createElement("div");
         div.innerHTML = `
-        <div class="card w-80 bg-base-100 shadow-xl h-96">
+        <div class="card  bg-base-100 shadow-xl h-96">
         <figure>
         
-        <img class="w-80 h-48" src=${vedios.thumbnail} alt="vedios" /></figure>
+        <img class=" h-48" src=${vedios.thumbnail} alt="vedios" /></figure>
         <div class="card-body">
         <div class = flex> 
         <div>
@@ -48,8 +67,10 @@ else{
         </div> 
           <h2 class="card-title">${vedios.title}</h2>
         </div>
-          <h3> ${vedios.others.views} views</h3>       
-          <h5>${vedios?.authors[0]?.profile_name}</h5>                 
+          <h3> ${vedios.others.views} views</h3> 
+               
+          <h5>${vedios?.authors[0]?.profile_name}</h5>    
+                     
       `;
         cardContainer.appendChild(div);
 
